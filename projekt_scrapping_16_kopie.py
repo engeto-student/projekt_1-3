@@ -76,11 +76,11 @@ URL = odkaz_2["href"]
 
 URL = "https://volby.cz/pls/ps2017nss/" + URL
 print(URL)
-print()
 odpoved_3 = r.get(URL)
 soup_3 = bs(odpoved_3.content, "html.parser")
 obsah_3 = soup_3.find("div", id='publikace')
 radky_3 = obsah_3.find_all("tr")
+
 
 slovnik = {
     "Voliči v seznamu": "",
@@ -98,7 +98,6 @@ if "Okrsky" in str(radky_3):
     f.remove("1")
     f.remove("1")
     f.remove("100,00")
-
     j = 0
     for i in slovnik:
         slovnik[i] = f[j]
@@ -106,6 +105,34 @@ if "Okrsky" in str(radky_3):
     data_list = list(slovnik.items())
     df = pd.DataFrame(data_list, columns=["klíč", "hodnota"])
     print(df)
+    print()
+
+    i = 5
+    tab = []
+    while i <= 16:
+        tabulka_1 = radky_3.__getitem__(i).text
+        f_1 = tabulka_1.splitlines()
+        f_1.pop(0)
+        f_1.pop(0)
+        f_1.pop(3)
+        f_1.pop(2)
+        tab.append(f_1)
+        i += 1
+    df_1 = pd.DataFrame(tab, columns=["politická strana", "platné hlasy"])
+    print(df_1)
+    i = 19
+    tab = []
+    while i <= 30:
+        tabulka_1 = radky_3.__getitem__(i).text
+        f_1 = tabulka_1.splitlines()
+        f_1.pop(0)
+        f_1.pop(0)
+        f_1.pop(3)
+        f_1.pop(2)
+        tab.append(f_1)
+        i += 1
+    df_2 = pd.DataFrame(tab, columns=["politická strana", "platné hlasy"])
+    print(df_2)
 
 else:
     radek = radky_3.__getitem__(1)
@@ -130,35 +157,80 @@ else:
         slovnik[i] = f[j]
         j += 1
     data_list = list(slovnik.items())
-    df = pd.DataFrame(data_list, columns=["klíč", "hodnota"])
-    print(df)
+    df_0 = pd.DataFrame(data_list, columns=["klíč", "hodnota"])
+    print(df_0)
+    print()
+    i = 4
+    tab = []
+    while i <= 15:
+        tabulka_1 = radky_4.__getitem__(i).text
+        f_1 = tabulka_1.splitlines()
+        f_1.pop(0)
+        f_1.pop(0)
+        f_1.pop(3)
+        f_1.pop(2)
+        tab.append(f_1)
+        i += 1
+    df_1 = pd.DataFrame(tab, columns=["politická strana", "platné hlasy"])
+    print(df_1)
+    print()
+    i = 18
+    tab = []
+    while i <= 29:
+        tabulka_1 = radky_4.__getitem__(i).text
+        f_1 = tabulka_1.splitlines()
+        f_1.pop(0)
+        f_1.pop(0)
+        f_1.pop(3)
+        f_1.pop(2)
+        tab.append(f_1)
+        i += 1
+    df_2 = pd.DataFrame(tab, columns=["politická strana", "platné hlasy"])
+    print(df_2)
 
-'možný výstup:'
+"Možný výstup: "
 
-'''E:\PycharmProjects\engeto\venv\Scripts\python.exe "E:/PycharmProjects/engeto/lekce 16/projekt_scrapping_16_kopie.py"
-
+"""E:\PycharmProjects\engeto\venv\Scripts\python.exe "E:/PycharmProjects/engeto/lekce 16/projekt_scrapping_16_kopie.py"
 https://volby.cz/pls/ps2017nss/ps3?xjazyk=CZ
-Zadej název města z internetové stránky: Praha
+Zadej název města z internetové stránky: Česká Lípa
 
-https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=1&xnumnuts=1100
-Zadej název obce z internetové stránky: Praha 1
+https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=7&xnumnuts=5101
+Zadej název obce z internetové stránky: Jestřebí
 
-https://volby.cz/pls/ps2017nss/ps33?xjazyk=CZ&xkraj=1&xobec=500054
-
-počet okrsků v obci:  21
-
-Vlož číslo okrsku: 15
-https://volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=1&xobec=500054&xokrsek=1015&xvyber=1100
-
+https://volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=7&xobec=561665&xvyber=5101
                 klíč hodnota
-0   Voliči v seznamu   1 336
-1      Vydané obálky     884
-2  Volební účast v %   66,17
-3   Odevzdané obálky     884
-4       Platné hlasy     880
-5   % platných hlasů   99,55
+0   Voliči v seznamu     672
+1      Vydané obálky     337
+2  Volební účast v %   50,15
+3   Odevzdané obálky     337
+4       Platné hlasy     336
+5   % platných hlasů   99,70
 
-Process finished with exit code 0'''
+                  politická strana platné hlasy
+0     Občanská demokratická strana           14
+1    Řád národa - Vlastenecká unie            2
+2      CESTA ODPOVĚDNÉ SPOLEČNOSTI            0
+3     Česká str.sociálně demokrat.           25
+4           STAROSTOVÉ A NEZÁVISLÍ           37
+5   Komunistická str.Čech a Moravy           22
+6                  Strana zelených            2
+7   ROZUMNÍ-stop migraci,diktát.EU            1
+8         Strana svobodných občanů            6
+9   Blok proti islam.-Obran.domova            0
+10   Občanská demokratická aliance            0
+11           Česká pirátská strana           32
+                  politická strana platné hlasy
+0       Referendum o Evropské unii            0
+1                           TOP 09            8
+2                         ANO 2011          128
+3                 Dobrá volba 2016            0
+4     SPR-Republ.str.Čsl. M.Sládka            2
+5    Křesť.demokr.unie-Čs.str.lid.            6
+6    Česká strana národně sociální            0
+7                         REALISTÉ            3
+8                        SPORTOVCI            2
+9    Dělnic.str.sociální spravedl.            1
+10  Svob.a př.dem.-T.Okamura (SPD)           44
+11              Strana Práv Občanů            1
 
-
-
+Process finished with exit code 0"""
