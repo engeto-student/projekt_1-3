@@ -120,6 +120,7 @@ if "Okrsky" in str(radky_3):
         i += 1
     df_1 = pd.DataFrame(tab, columns=["politická strana", "platné hlasy"])
     print(df_1)
+    print()
     i = 19
     tab = []
     while i <= 30:
@@ -219,6 +220,7 @@ https://volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=7&xobec=561665&xvyber=5101
 9   Blok proti islam.-Obran.domova            0
 10   Občanská demokratická aliance            0
 11           Česká pirátská strana           32
+
                   politická strana platné hlasy
 0       Referendum o Evropské unii            0
 1                           TOP 09            8
