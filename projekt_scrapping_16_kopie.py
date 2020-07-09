@@ -121,6 +121,7 @@ if "Okrsky" in str(radky_3):
     df_1 = pd.DataFrame(tab, columns=["politická strana", "platné hlasy"])
     print(df_1)
     print()
+
     i = 20
     tab = []
     while i <= 30:
@@ -189,50 +190,55 @@ else:
     df_2 = pd.DataFrame(tab, columns=["politická strana", "platné hlasy"])
     print(df_2)
 
+
 "Možný výstup: "
 
 """E:\PycharmProjects\engeto\venv\Scripts\python.exe "E:/PycharmProjects/engeto/lekce 16/projekt_scrapping_16_kopie.py"
 https://volby.cz/pls/ps2017nss/ps3?xjazyk=CZ
-Zadej název města z internetové stránky: Česká Lípa
+Zadej název města z internetové stránky: Kladno
 
-https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=7&xnumnuts=5101
-Zadej název obce z internetové stránky: Jestřebí
+https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2103
+Zadej název obce z internetové stránky: Buštěhrad
 
-https://volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=7&xobec=561665&xvyber=5101
+https://volby.cz/pls/ps2017nss/ps33?xjazyk=CZ&xkraj=2&xobec=532169
+počet okrsků v obci:  2
+
+Vlož číslo okrsku: 1
+https://volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=2&xobec=532169&xokrsek=1&xvyber=2103
+
                 klíč hodnota
-0   Voliči v seznamu     672
-1      Vydané obálky     337
-2  Volební účast v %   50,15
-3   Odevzdané obálky     337
-4       Platné hlasy     336
-5   % platných hlasů   99,70
+0   Voliči v seznamu   1 237
+1      Vydané obálky     866
+2  Volební účast v %   70,01
+3   Odevzdané obálky     866
+4       Platné hlasy     864
+5   % platných hlasů   99,77
 
                   politická strana platné hlasy
-0     Občanská demokratická strana           14
-1    Řád národa - Vlastenecká unie            2
-2      CESTA ODPOVĚDNÉ SPOLEČNOSTI            0
-3     Česká str.sociálně demokrat.           25
-4           STAROSTOVÉ A NEZÁVISLÍ           37
-5   Komunistická str.Čech a Moravy           22
-6                  Strana zelených            2
-7   ROZUMNÍ-stop migraci,diktát.EU            1
-8         Strana svobodných občanů            6
-9   Blok proti islam.-Obran.domova            0
-10   Občanská demokratická aliance            0
-11           Česká pirátská strana           32
+0     Občanská demokratická strana          129
+1    Řád národa - Vlastenecká unie            0
+2      CESTA ODPOVĚDNÉ SPOLEČNOSTI            1
+3     Česká str.sociálně demokrat.           44
+4                   Radostné Česko            1
+5           STAROSTOVÉ A NEZÁVISLÍ           65
+6   Komunistická str.Čech a Moravy           64
+7                  Strana zelených            7
+8   ROZUMNÍ-stop migraci,diktát.EU            1
+9         Strana svobodných občanů           14
+10  Blok proti islam.-Obran.domova            1
+11   Občanská demokratická aliance            1
 
-                  politická strana platné hlasy
-0       Referendum o Evropské unii            0
-1                           TOP 09            8
-2                         ANO 2011          128
-3                 Dobrá volba 2016            0
-4     SPR-Republ.str.Čsl. M.Sládka            2
-5    Křesť.demokr.unie-Čs.str.lid.            6
-6    Česká strana národně sociální            0
-7                         REALISTÉ            3
-8                        SPORTOVCI            2
-9    Dělnic.str.sociální spravedl.            1
-10  Svob.a př.dem.-T.Okamura (SPD)           44
-11              Strana Práv Občanů            1
+                 politická strana platné hlasy
+0                 Unie H.A.V.E.L.            0
+1      Referendum o Evropské unii            1
+2                          TOP 09           61
+3                        ANO 2011          264
+4                Dobrá volba 2016            0
+5    SPR-Republ.str.Čsl. M.Sládka            2
+6   Křesť.demokr.unie-Čs.str.lid.           25
+7   Česká strana národně sociální            0
+8                        REALISTÉ            3
+9                       SPORTOVCI            3
+10  Dělnic.str.sociální spravedl.            1
 
 Process finished with exit code 0"""
