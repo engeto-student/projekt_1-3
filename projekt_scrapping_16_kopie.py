@@ -121,7 +121,7 @@ if "Okrsky" in str(radky_3):
     df_1 = pd.DataFrame(tab, columns=["politická strana", "platné hlasy"])
     print(df_1)
     print()
-    i = 19
+    i = 20
     tab = []
     while i <= 30:
         tabulka_1 = radky_3.__getitem__(i).text
