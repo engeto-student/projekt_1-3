@@ -175,7 +175,7 @@ else:
     df_1 = pd.DataFrame(tab, columns=["politická strana", "platné hlasy"])
     print(df_1)
     print()
-    i = 18
+    i = 19
     tab = []
     while i <= 29:
         tabulka_1 = radky_4.__getitem__(i).text
