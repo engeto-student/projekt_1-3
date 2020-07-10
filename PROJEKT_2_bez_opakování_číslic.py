@@ -1,5 +1,5 @@
 import random
-cislo = set()
+cisla = set()
 tipy = []
 seznam = []
 
@@ -14,11 +14,11 @@ m = int(input("Vlož počet číslic: "))
 
 for i in range(0, n):
     for i in range(0, m):
-        cislo.clear()
-        while len(cislo) < m:
+        cisla.clear()
+        while len(cisla) < m:
             cislice = str(random.randint(1, 9))
-            cislo.add(cislice)
-    seznam.append(int("".join(cislo)))
+            cisla.add(cislice)
+    seznam.append(int("".join(cisla)))
 
 print("Seznam generovaných čísel (pro kontrolu algoritmu): ", seznam)
 
@@ -34,6 +34,8 @@ for j in range(0, n):
                 print("Bull na pozici:", i)
                 Bulls_pocet = Bulls_pocet + 1
             else: print("Cows na pozici:", i); Cows_pocet = Cows_pocet + 1
+    if tipy[j] not in cisla:
+        print("Tipované číslo není mezi čísly generovanými.")
 
 print("Bulls: ", Bulls_pocet)
 print("Cows: ", Cows_pocet)
