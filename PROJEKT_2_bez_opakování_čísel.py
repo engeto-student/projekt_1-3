@@ -29,6 +29,9 @@ for j in range(0, n):
                 print("Bull na pozici:", i)
                 Bulls_pocet = Bulls_pocet + 1
             else: print("Cows na pozici:", i); Cows_pocet = Cows_pocet + 1
+    if tipy[j] not in cisla:
+        print("Tipované číslo není mezi čísly generovanými.")
 
 print("Bulls: ", Bulls_pocet)
 print("Cows: ", Cows_pocet)
+
