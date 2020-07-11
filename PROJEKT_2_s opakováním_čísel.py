@@ -13,7 +13,7 @@ stop = int(input("Vlož horní hranici intervalu: "))
 for i in range(0, n):
     cislo = random.randint(start, stop)
     cisla.append(cislo)
-print("generovaaná čísla (pro kontrolu funkčnosti programu): ", cisla)
+print("generovaná čísla (pro kontrolu funkčnosti programu): ", cisla)
 
 for j in range(0, n):
     tip = int(input("Tipni si číslo v mezích dolní a horní hranice intervalu: " ))
@@ -23,9 +23,12 @@ for j in range(0, n):
             if j == i:
                 print("Bull na pozici:", i)
                 Bulls_pocet = Bulls_pocet + 1
-            else: print("Cows na pozici:", i); Cows_pocet = Cows_pocet + 1
+                print("Bulls celkem: ",Bulls_pocet)
+                print("Cows celkem: ", Cows_pocet)
+            else: print("Cows na pozici:", i); Cows_pocet = Cows_pocet + 1; print("Bulls celkem: ",Bulls_pocet), \
+                                                                            print("Cows celkem: ", Cows_pocet)
     if tipy[j] not in cisla:
         print("Tipované číslo není mezi čísly generovanými.")
+        print("Bulls celkem: ", Bulls_pocet)
+        print("Cows celkem: ", Cows_pocet)
 
-print("Bulls: ", Bulls_pocet)
-print("Cows: ", Cows_pocet)
