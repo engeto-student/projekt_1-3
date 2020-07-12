@@ -28,10 +28,11 @@ for j in range(0, n):
             if j == i:
                 print("Bull na pozici:", i)
                 Bulls_pocet = Bulls_pocet + 1
-            else: print("Cows na pozici:", i); Cows_pocet = Cows_pocet + 1
+                print("Bulls celkem: ", Bulls_pocet)
+                print("Cows celkem: ", Cows_pocet)
+            else: print("Cows na pozici:", i); Cows_pocet = Cows_pocet + 1; print("Bulls celkem: ", Bulls_pocet), \
+                                                                                print("Cows celkem: ", Cows_pocet)
     if tipy[j] not in cisla:
         print("Tipované číslo není mezi čísly generovanými.")
-
-print("Bulls: ", Bulls_pocet)
-print("Cows: ", Cows_pocet)
-
+        print("Bulls celkem: ", Bulls_pocet)
+        print("Cows celkem: ", Cows_pocet)
