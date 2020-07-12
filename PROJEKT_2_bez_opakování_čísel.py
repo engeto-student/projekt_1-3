@@ -17,9 +17,6 @@ while len(cisla) < n:
 seznam = list(cisla)
 print("generovaná čísla: ", seznam)
 
-i = 0
-j = 0
-
 for j in range(0, n):
     tip = int(input("Tipni si číslo v mezích dolní a horní hranice: " ))
     tipy.append(tip)
