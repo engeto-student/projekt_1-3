@@ -34,8 +34,8 @@ def hra():
     while i > -1:
         zobraz_desku(deska)
         print("Jsi na řadě,", na_tahu)
-        kod = ""
 
+        kod = ""
         j = 0
         while j > -1:
             kod = input("Vlož číselný kód i - tého pole od 1 do 9: ")
