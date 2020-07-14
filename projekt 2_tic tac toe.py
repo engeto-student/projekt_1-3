@@ -52,7 +52,7 @@ def hra():
             print("Místo je vyplněno, vyber si jiné.")
             continue
 
-        if i >= 5:
+        if i >= 4:
             if deska['1'] == deska['2'] == deska['3'] != ' ':
                 zobraz_desku(deska)
                 print("Hra skončila.")
